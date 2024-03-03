@@ -1,13 +1,16 @@
+/* Reset styles */
 body, h1, h2, h3, p, img, ul, li {
     border: 0;
     margin: 0;
     padding: 0;
 }
 
+/* Global styles */
 body {
     background: #eaf8fb;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
+    line-height: 21px;
 }
 
 /* Header styles */
@@ -61,22 +64,31 @@ ul.navigation li a:hover {
     width: 100%; /* Adjust width for responsive layout */
 }
 
+.col-right img {
+    float: none; /* Reset float for images */
+    margin: 0 auto 10px; /* Center images */
+}
+
 .sidebar-left {
+    float: none; /* Reset float for sidebar */
+    width: 100%; /* Adjust width for responsive layout */
     padding: 0 10px;
 }
 
-@media only screen and (min-width: 600px) {
-    .content {
-        flex-direction: row; /* Switch to horizontal layout */
-    }
-
-    .col-right,
-    .sidebar-left {
-        width: calc(50% - 5px); /* Adjust width for two columns with spacing */
-        margin: 0 5px; /* Add spacing between columns */
-    }
+.list {
+    border-bottom: 1px solid #c3dce1;
+    padding: 0 0 20px 15px;
 }
 
+.list li {
+    margin-bottom: 10px;
+}
+
+.list li a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+}
 
 /* Footer styles */
 #footer {
@@ -87,15 +99,19 @@ ul.navigation li a:hover {
     width: 900px;
 }
 
-/* Image styles */
-img {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto;
-}
-
 /* Media queries for mobile responsiveness */
 @media only screen and (max-width: 600px) {
-    body {
-        font-size: 12px; /* Adjust font size for smaller screens */
+    .content {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+
+    .col-right,
+    .sidebar-left {
+        width: 100%; /* Adjust width for smaller screens */
+        padding: 0; /* Reset padding */
+    }
+
+    .col-right img {
+        margin: 0 auto 20px; /* Adjust image margin for smaller screens */
     }
 }
