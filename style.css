@@ -44,13 +44,6 @@ ul.navigation li a {
     text-decoration: none;
 }
 
-/* For devices that support hover */
-@media (hover: hover) {
-    ul.navigation li a:hover {
-        background-color: #000;
-    }
-}
-
 /* Content Styles */
 div.content {
     margin: 15px auto;
@@ -96,4 +89,11 @@ div#footer {
 
 .clear {
     clear: both;
+}
+
+/* For devices that support hover */
+@media (hover: hover) {
+    ul.navigation li a:hover {
+        background-color: #000;
+    }
 }
