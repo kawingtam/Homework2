@@ -52,6 +52,16 @@ ul.navigation li a:hover {
 div.content {
     margin: 15px auto;
     width: 90%; /* Adjusted for responsiveness */
+    animation: fadeIn 1s ease-out; /* Animation added */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 div.col-right {
