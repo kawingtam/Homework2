@@ -1,33 +1,28 @@
-/* Reset CSS */
 body, h1, h2, h3, p, img, ul, li {
     border: 0;
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensure consistent box model */
 }
 
-/* General Styles */
 body {
     background: #eaf8fb;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
 }
 
-/* Header Styles */
-div#header {
-    background-color: #333;
-    background-image: url(images/headerbkgd.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    color: #fff;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    margin: 0 auto;
-    min-height: 130px;
-    padding: 45px 15px 15px;
-    width: 100%; /* Adjusted for responsiveness */
+p {
+    letter-spacing: 0.04em;
+    line-height: 21px;
 }
 
-/* Navigation Styles */
+div#header {
+    background-color: #333;
+    color: #fff;
+    padding: 45px 15px 15px;
+    text-align: center; /* Center text */
+}
+
 ul.navigation {
     list-style: none;
     margin-top: 20px;
@@ -47,59 +42,36 @@ ul.navigation li a {
     text-decoration: none;
 }
 
-/* For devices that support hover */
-@media (hover: hover) {
-    ul.navigation li a:hover {
-        background-color: #000;
-    }
+ul.navigation li a:hover {
+    background-color: #000;
 }
 
-/* Content Styles */
-div.content {
+.content {
     margin: 15px auto;
     width: 90%; /* Adjusted for responsiveness */
-    animation: fadeIn 1s ease-out;
+    display: flex;
+    justify-content: space-between; /* Separate columns */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.col-right {
+    width: 66.66%; /* Adjusted for responsiveness */
 }
 
-div.col-right {
-    float: right;
-    width: 70%; /* Adjusted for responsiveness */
-}
-
-div.sidebar-left {
-    float: left;
-    padding: 0 10px;
+.sidebar-left {
     width: 30%; /* Adjusted for responsiveness */
 }
 
-/* Sidebar Styles */
-div.sidebar-left a {
+.sidebar-left a {
     color: #445e64;
 }
 
-/* Footer Styles */
-div#footer {
+.sidebar-left a:hover {
+    text-decoration: none;
+}
+
+#footer {
     background-color: #c4d5d9;
-    margin: 0 auto;
     padding: 15px;
     text-align: center;
-    width: 100%; /* Adjusted for responsiveness */
-}
-
-.float-left,
-.float-right {
-    /* No changes */
-}
-
-.clear {
-    clear: both;
+    width: 100%;
 }
