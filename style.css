@@ -44,8 +44,11 @@ ul.navigation li a {
     text-decoration: none;
 }
 
-ul.navigation li a:hover {
-    background-color: #000;
+/* For devices that support hover */
+@media (hover: hover) {
+    ul.navigation li a:hover {
+        background-color: #000;
+    }
 }
 
 /* Content Styles */
@@ -75,25 +78,6 @@ div.sidebar-left {
 /* Sidebar Styles */
 div.sidebar-left a {
     color: #445e64;
-}
-
-div.sidebar-left a:hover {
-    text-decoration: none;
-}
-
-.list {
-    border-bottom: 1px solid #c3dce1;
-    padding: 0 0 20px 15px;
-}
-
-.list li {
-    margin-bottom: 10px;
-}
-
-.list li a {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 11px;
 }
 
 /* Footer Styles */
